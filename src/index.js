@@ -55,7 +55,7 @@ export default class ThingList extends React.Component {
         console.log(this.state);
         const persons = this.state.data.map((item, i) => {
             return <div>
-                <h1>{item.data}</h1>
+                <h1>{item.id}: {item.name}</h1>
             </div>
         });
 
