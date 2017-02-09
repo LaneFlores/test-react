@@ -10,7 +10,7 @@ var API_HOST = 'https://agile-mountain-42351-dev.herokuapp.com/';
 var init = function() {
     ReactDOM.render(
         <App />,
-        document.getElementById('root')
+        document.getElementById('main')
     );
 
     console.log("Hello world?!");
