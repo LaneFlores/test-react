@@ -36,6 +36,8 @@ export default class ThingList extends React.Component {
         this.ThingList();
     }
 
+
+
     ThingList() {
         return $.getJSON(API_HOST + 'person')
             .then((data) => {
@@ -65,5 +67,7 @@ export default class ThingList extends React.Component {
         </div>
     }
 }
+
+console.log("About to start initialization.");
 
 init();
