@@ -46,6 +46,7 @@ export default class ThingList extends React.Component {
                     data: data
                 });
             });
+        console.log("Finished with data.");
     }
 
     render() {
