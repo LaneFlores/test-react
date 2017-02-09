@@ -10,13 +10,13 @@ var API_HOST = 'https://agile-mountain-42351-dev.herokuapp.com/';
 var init = function() {
     ReactDOM.render(
         <App />,
-        document.getElementById('main')
+        document.getElementById('root')
     );
 
     console.log("Hello world?!");
 
     const element = <ThingList />;
-    ReactDOM.render(element, document.getElementById('root'));
+    ReactDOM.render(element, document.getElementById('main'));
 };
 
 export default class ThingList extends React.Component {
