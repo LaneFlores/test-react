@@ -18,6 +18,8 @@ var init = function() {
 
     const element = <ThingList />;
     ReactDOM.render(element, document.getElementById('main'));
+
+    console.log("Done.");
 };
 
 export default class ThingList extends React.Component {
