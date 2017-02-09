@@ -5,7 +5,8 @@ import App from './App';
 import './index.css';
 
 //var API_HOST = 'http://localhost:8083/';
-var API_HOST = 'https://agile-mountain-42351-dev.herokuapp.com/';
+//var API_HOST = 'https://agile-mountain-42351-dev.herokuapp.com/';
+var API_HOST = 'https://sample-php-api.herokuapp.com/';
 
 var init = function() {
     ReactDOM.render(
@@ -34,7 +35,7 @@ export default class ThingList extends React.Component {
     }
 
     ThingList() {
-        return $.getJSON(API_HOST + 'journal')
+        return $.getJSON(API_HOST + 'person')
             .then((data) => {
                 console.log("Received data:");
                 console.log(data);
