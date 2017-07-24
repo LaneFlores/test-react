@@ -158,7 +158,7 @@ function calculateWinner(squares) {
 }
 
 function getHorizontalWinner(squares) {
-    for (i=0; i<9; i+=3) {
+    for (let i=0; i<9; i+=3) {
         if (squares[i] && squares[i] === squares[i+1] && squares[i] === squares[i+2]) {
             return squares[i];
         }
