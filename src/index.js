@@ -66,30 +66,47 @@ export default class ThingList extends React.Component {
     }
 }
 
-class Square extends React.Component {
-    constructor() {
-        super();
-        this.state = {
-            value: null,
-        };
-    }
-
-    render() {
-        return (
-            <button className="square" onClick={() => this.setState({value: 'X'})}>
-                {this.state.value}
-            </button>
-        );
-    }
+function Square(props) {
+    return (
+        <button className="square" onClick={props.onClick}>
+            {props.value}
+        </button>
+    );
 }
 
 class Board extends React.Component {
+    constructor() {
+        super();
+        this.state = {
+            squares: Array(9).fill(null),
+            xIsNext: true
+        };
+    }
+
+    handleClick(i) {
+        const squares = this.state.squares.slice();
+        if (calculateWinner(squares) || squares[i]) {
+            return;
+        }
+        squares[i] = this.state.xIsNext ? 'X' : 'O';
+        this.setState({
+            squares: squares,
+            xIsNext: !this.state.xIsNext
+        });
+    }
+
     renderSquare(i) {
-        return <Square value={i} />;
+        return (
+            <Square
+                value={this.state.squares[i]}
+                onClick={() => this.handleClick(i)}
+            />
+        );
     }
 
     render() {
-        const status = 'Next Player: X';
+        const winner = calculateWinner(this.state.squares);
+        let status = (winner) ? 'Winner: ' + winner : 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
 
         return (
             <div>
@@ -128,6 +145,45 @@ class Game extends React.Component {
             </div>
         );
     }
+}
+
+function calculateWinner(squares) {
+    let winner = getHorizontalWinner(squares);
+    if (winner) return winner;
+
+    winner = getVerticalWinner(squares);
+    if (winner) return winner;
+
+    return getDiagonalWinner(squares);
+}
+
+function getHorizontalWinner(squares) {
+    for (i=0; i<9; i+=3) {
+        if (squares[i] && squares[i] === squares[i+1] && squares[i] === squares[i+2]) {
+            return squares[i];
+        }
+    }
+
+    return false;
+}
+
+function getVerticalWinner(squares) {
+    for (let i=0; i<3; i++) {
+        if (squares[i] && squares[i] === squares[i+3] && squares[i] === squares[i+6]) {
+            return squares[i];
+        }
+    }
+    return false;
+}
+
+function getDiagonalWinner(squares) {
+    if (squares[0] && squares[0] === squares[4] && squares[0] === squares[8]) {
+        return squares[i];
+    }
+    if (squares[2] && squares[2] === squares[4] && squares[2] === squares[6]) {
+        return squares[i];
+    }
+    return false;
 }
 
 console.log("About to start initialization.");
