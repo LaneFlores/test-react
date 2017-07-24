@@ -178,10 +178,10 @@ function getVerticalWinner(squares) {
 
 function getDiagonalWinner(squares) {
     if (squares[0] && squares[0] === squares[4] && squares[0] === squares[8]) {
-        return squares[i];
+        return squares[0];
     }
     if (squares[2] && squares[2] === squares[4] && squares[2] === squares[6]) {
-        return squares[i];
+        return squares[2];
     }
     return false;
 }
