@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import $ from "jquery";
 import App from './App';
 import './index.css';
-import Game from './Game'
+import Game from './game'
 
 const API_HOST = 'https://sample-php-api.herokuapp.com/';
 
