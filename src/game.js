@@ -67,6 +67,58 @@ class Board extends React.Component {
             </div>
         );
     }
+
+    calculateWinner() {
+        let winner = this.getHorizontalWinner();
+        if (winner) return winner;
+
+        winner = this.getVerticalWinner();
+        if (winner) return winner;
+
+        return this.getDiagonalWinner();
+    }
+
+    getHorizontalWinner() {
+        for (let i=0; i<9; i+=3) {
+            if (
+                this.state.squares[i]
+                && this.state.squares[i] === this.state.squares[i+1]
+                && this.state.squares[i] === this.state.squares[i+2]
+            ) {
+                return this.state.squares[i];
+            }
+        }
+
+        return false;
+    }
+
+
+
+    getVerticalWinner() {
+        for (let i=0; i<3; i++) {
+            if (this.state.squares[i] && this.state.squares[i] === this.state.squares[i+3] && this.state.squares[i] === this.state.squares[i+6]) {
+                return this.state.squares[i];
+            }
+        }
+        return false;
+    }
+
+    getDiagonalWinner() {
+        if (isMatching(0,4,8)) return this.state.squares[0];
+        if (isMatching(2,4,6)) return this.state.squares[2];
+
+        /*if (this.state.squares[0] && this.state.squares[0] === this.state.squares[4] && this.state.squares[0] === this.state.squares[8]) {
+            return this.state.squares[0];
+        }
+        if (this.state.squares[2] && this.state.squares[2] === this.state.squares[4] && this.state.squares[2] === this.state.squares[6]) {
+            return this.state.squares[2];
+        }*/
+        return false;
+    }
+
+    isMatching(x, y, z) {
+        return (this.state.squares[x] && this.state.squares[x] === this.state.squares[y] && this.state.squares[x] === this.state.squares[z]);
+    }
 }
 
 class Game extends React.Component {

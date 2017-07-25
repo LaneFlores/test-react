@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import $ from "jquery";
 import App from './App';
 import './index.css';
+import Game from './Game'
 
-var API_HOST = 'https://sample-php-api.herokuapp.com/';
+const API_HOST = 'https://sample-php-api.herokuapp.com/';
 
-var init = function() {
+function init() {
     ReactDOM.render(
         <App />,
         document.getElementById('root')
@@ -18,7 +19,7 @@ var init = function() {
     ReactDOM.render(element, document.getElementById('main'));
 
     console.log("Done.");
-};
+}
 
 export default class ThingList extends React.Component {
     constructor(props) {
@@ -66,7 +67,7 @@ export default class ThingList extends React.Component {
     }
 }
 
-function Square(props) {
+/*function Square(props) {
     return (
         <button className="square" onClick={props.onClick}>
             {props.value}
@@ -139,8 +140,8 @@ class Game extends React.Component {
                     <Board />
                 </div>
                 <div className="game-info">
-                    <div>{/* status */}</div>
-                    <ol>{/* TODO */}</ol>
+                    <div>{/* status *}</div>
+                    <ol>{/* TODO *}</ol>
                 </div>
             </div>
         );
@@ -184,13 +185,13 @@ function getDiagonalWinner(squares) {
         return squares[2];
     }
     return false;
-}
+}*/
 
 console.log("About to start initialization.");
 
 //init();
 
-ReactDOM.render(
+/*ReactDOM.render(
     <Game />,
     document.getElementById('root')
-);
+);*/
