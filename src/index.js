@@ -62,6 +62,12 @@ const Topic = ({ match }) => (
     </div>
 );
 
+const Topics = ({ match }) => (
+    <div>
+        <h3>{match.params.topicId}</h3>
+    </div>
+);
+
 
 
 const BasicExample = () => (
