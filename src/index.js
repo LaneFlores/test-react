@@ -34,4 +34,9 @@ function gameInit() {
 }
 
 //peopleInit();
-gameInit();
+//gameInit();
+
+ReactDOM.render(
+    <Game />,
+    document.getElementById('root')
+);
