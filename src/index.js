@@ -6,8 +6,6 @@ import './css/index.css';
 import Game from './model/Game'
 import PersonList from "./model/PersonList";
 
-const API_HOST = 'https://sample-php-api.herokuapp.com/';
-
 function peopleInit() {
     console.log("peopleInit(): Entered.");
     ReactDOM.render(

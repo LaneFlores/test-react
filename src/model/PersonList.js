@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import $ from "jquery";
 import App from '../App';
 
+const API_HOST = 'https://sample-php-api.herokuapp.com/';
+
 export default class PersonList extends React.Component {
     constructor(props) {
         super(props);
