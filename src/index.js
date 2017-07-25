@@ -32,7 +32,7 @@ function gameInit() {
 }
 
 //peopleInit();
-//gameInit();
+gameInit();
 
 ReactDOM.render(
     <Game />,
