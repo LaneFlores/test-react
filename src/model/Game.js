@@ -175,6 +175,4 @@ function getDiagonalWinner(squares) {
     return false;
 }
 
-console.log("About to start initialization.");
-
 //init();
