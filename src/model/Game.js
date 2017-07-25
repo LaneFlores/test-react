@@ -1,8 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import $ from "jquery";
-import App from './App';
-import './index.css';
+//import React from 'react';
+//import ReactDOM from 'react-dom';
+//import $ from "jquery";
+//import App from '../App';
+//import '../index.css';
 
 function Square(props) {
     return (
@@ -179,8 +179,3 @@ function getDiagonalWinner(squares) {
 console.log("About to start initialization.");
 
 //init();
-
-ReactDOM.render(
-    <Game />,
-    document.getElementById('root')
-);
