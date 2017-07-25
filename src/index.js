@@ -73,9 +73,7 @@ const Home = () => (
 );
 
 const About = () => (
-    <div>
-        <h2>About</h2>
-    </div>
+    <Game />
 );
 
 const Topic = ({ match }) => (
