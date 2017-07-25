@@ -4,9 +4,9 @@ import $ from "jquery";
 import App from './App';
 import './css/index.css';
 import Game from './model/Game'
-import PersonList from "./model/PersonList";
+//import PersonList from "./model/PersonList";
 
-function peopleInit() {
+/*function peopleInit() {
     console.log("peopleInit(): Entered.");
     ReactDOM.render(
         <App />,
@@ -18,7 +18,7 @@ function peopleInit() {
 
     console.log("Done.");
     console.log("peopleInit(): Done.");
-}
+}*/
 
 function gameInit() {
     console.log("gameInit(): Entered.");
