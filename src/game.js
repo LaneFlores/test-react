@@ -104,8 +104,8 @@ class Board extends React.Component {
     }
 
     getDiagonalWinner() {
-        if (isMatching(0,4,8)) return this.state.squares[0];
-        if (isMatching(2,4,6)) return this.state.squares[2];
+        if (this.isMatching(0,4,8)) return this.state.squares[0];
+        if (this.isMatching(2,4,6)) return this.state.squares[2];
 
         /*if (this.state.squares[0] && this.state.squares[0] === this.state.squares[4] && this.state.squares[0] === this.state.squares[8]) {
             return this.state.squares[0];
