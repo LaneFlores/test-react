@@ -3,19 +3,28 @@ import ReactDOM from 'react-dom';
 import $ from "jquery";
 
 export default class Report extends React.Component {
-    constructor(title, fields, records) {
+    /*constructor(title, fields, records) {
         super();
         this.state = {
             title: title,
             fields: fields,
             records: records
         };
+    }*/
+
+    constructor() {
+        super();
     }
 
     render() {
         return (
             <section>
-                <header>{this.state.title}</header>
+                <header>{this.props.title}</header>
+                <table>
+                    <tr>
+                        {this.props.fields.forEach((field) => {this.renderField(field)})}
+                    </tr>
+                </table>
             </section>
         );
     }
