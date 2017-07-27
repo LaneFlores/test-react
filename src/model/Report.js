@@ -16,11 +16,6 @@ export default class Report extends React.Component {
         return (
             <section>
                 <header>{this.state.title}</header>
-                <table>
-                    <tr>
-                        {this.state.fields.forEach((field) => {this.renderField(field)})}
-                    </tr>
-                </table>
             </section>
         );
     }
