@@ -4,6 +4,7 @@ import $ from "jquery";
 import App from './App';
 import './css/index.css';
 import Game from './model/Game';
+import Report from './model/Report';
 //import PersonList from "./model/PersonList";
 import {
     BrowserRouter as Router,
@@ -88,6 +89,16 @@ const Topics = ({ match }) => (
     </div>
 );
 
+const ReportPage = () => (
+    <Report
+        title="Test Report"
+        fields={{first:"first", second:"second"}}
+        records={{
+            one:{first:"asdf", second:"qwer"}
+        }}
+    />
+);
+
 
 
 const BasicExample = () => (
@@ -97,6 +108,7 @@ const BasicExample = () => (
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/topics">Topics</Link></li>
+                <li><Link to="/report">Report</Link></li>
             </ul>
 
             <hr/>
@@ -104,6 +116,7 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
+            <Route exact path="/report" component={ReportPage}/>
         </div>
     </Router>
 );

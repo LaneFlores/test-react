@@ -1,4 +1,41 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from "jquery";
-import App from '../App';
+
+export default class Report extends React.Component {
+    constructor(title, fields, records) {
+        super();
+        this.state = {
+            title: title,
+            fields: fields,
+            records: records
+        };
+    }
+
+    render() {
+        return (
+            <section>
+                <header>{title}</header>
+                <table>
+                    <tr>
+                        {fields.forEach((field) => {this.renderField(field)})}
+                    </tr>
+                </table>
+            </section>
+        );
+    }
+
+    renderField(field) {
+        return (<th>{field}</th>);
+    }
+
+    renderRecord(record) {
+        return (
+            {this:state.fields.forEach((field) => {this.renderRecordField(field, record)})}
+        );
+    }
+
+    renderRecordField(field, record) {
+        return (<td>{record[field]}</td>)
+    }
+}
