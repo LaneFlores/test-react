@@ -15,10 +15,10 @@ export default class Report extends React.Component {
     render() {
         return (
             <section>
-                <header>{title}</header>
+                <header>{this.state.title}</header>
                 <table>
                     <tr>
-                        {fields.forEach((field) => {this.renderField(field)})}
+                        {this.state.fields.forEach((field) => {this.renderField(field)})}
                     </tr>
                 </table>
             </section>
@@ -30,9 +30,7 @@ export default class Report extends React.Component {
     }
 
     renderRecord(record) {
-        return (
-            {this:state.fields.forEach((field) => {this.renderRecordField(field, record)})}
-        );
+        return this.state.fields.forEach((field) => {this.renderRecordField(field, record)});
     }
 
     renderRecordField(field, record) {
