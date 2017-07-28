@@ -43,11 +43,13 @@ export default class Report extends React.Component {
         }*/
 
         let records = [];
+        console.log("Here?");
         for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
             let row = this.props.records[field];
             records.push(this.renderRecord(row));
         }
+        console.log("Or here?");
 
 
 
@@ -72,9 +74,9 @@ export default class Report extends React.Component {
      }
      */
 
-    renderField(field) {
+    /*renderField(field) {
         return (<th>{field}</th>);
-    }
+    }*/
 
     renderRecord(record) {
         let columns = [];
