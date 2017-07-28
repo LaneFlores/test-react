@@ -47,7 +47,7 @@ export default class Report extends React.Component {
         for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
             let row = this.props.records[field];
-            records.push(<tr>{this.renderRecord(row, this.props.fields)}</tr>);
+            records.push(<tr>{this.renderRecord(row)}</tr>);
         }
 
 
