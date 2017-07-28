@@ -18,8 +18,8 @@ export default class Report extends React.Component {
             rows.push(<th>{field}</th>);
         });*/
         console.log(this.props.fields);
-        for (var key in this.props.fields) {
-            rows.push(<th>{field}</th>);
+        for (let key in this.props.fields) {
+            rows.push(<th>{key}</th>);
         }
         //return (<section>{this.props.fields}</section>);
         return (
