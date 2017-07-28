@@ -94,7 +94,9 @@ const ReportPage = () => (
         title="Test Report"
         fields={["one", "two", "three"]}
         records={{
-            one:{first:"asdf", second:"qwer"}
+            a:{one:"a", two:"aa", three:"aaa"},
+            b:{one:"b", two:"bb"},
+            c:{one:"c", two:"cc", three:"ccc"}
         }}
         //fields={{first:"first", second:"second"}}
     />
