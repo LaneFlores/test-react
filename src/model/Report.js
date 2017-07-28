@@ -43,6 +43,13 @@ export default class Report extends React.Component {
             );
         }
 
+        let records = [];
+        for (let field in this.props.records) {
+            if (!this.props.records.hasOwnProperty(field)) continue;
+            let row = this.props.records[field];
+            records.push(<tr>{this.renderRecord(row, this.props.fields)}</tr>);
+        }
+
 
 
         return (
@@ -53,6 +60,7 @@ export default class Report extends React.Component {
                         {headers}
                     </tr>
                     {rows}
+                    {records}
                 </table>
             </section>
         );
@@ -70,7 +78,17 @@ export default class Report extends React.Component {
     }
 
     renderRecord(record) {
-        return this.state.fields.forEach((field) => {this.renderRecordField(field, record)});
+        let columns = [];
+        for (let key in this.props.fields) {
+            if (!this.props.fields.hasOwnProperty(key)) continue;
+            let value = this.props.fields[key];
+            console.log("key:" + key);
+            console.log("value:" + value);
+            console.log(row);
+
+            columns.push(<td>{row[value]}</td>);
+        }
+        return columns;
     }
 
     renderRecordField(field, record) {
