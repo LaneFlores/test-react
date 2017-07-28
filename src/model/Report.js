@@ -31,6 +31,7 @@ export default class Report extends React.Component {
                 let value = this.props.fields[key];
                 console.log("key:" + key);
                 console.log("value:" + value);
+                console.log("row:" + row);
 
                 fields.push(<td>{row[value]}</td>);
 
