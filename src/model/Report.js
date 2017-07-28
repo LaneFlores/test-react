@@ -21,7 +21,7 @@ export default class Report extends React.Component {
             headers.push(<th>{this.props.fields[key]}</th>);
         }
 
-        for (let field in this.props.records) {
+        /*for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
             let row = this.props.records[field];
 
@@ -41,13 +41,13 @@ export default class Report extends React.Component {
                     {fields}
                 </tr>
             );
-        }
+        }*/
 
         let records = [];
         for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
             let row = this.props.records[field];
-            records.push(<tr>{this.renderRecord(row)}</tr>);
+            records.push(this.renderRecord(row));
         }
 
 
@@ -88,7 +88,7 @@ export default class Report extends React.Component {
 
             columns.push(<td>{row[value]}</td>);
         }
-        return columns;
+        return (<tr>columns</tr>);
     }
 
     renderRecordField(field, record) {
