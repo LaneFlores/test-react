@@ -29,6 +29,8 @@ export default class Report extends React.Component {
             for (let key in this.props.fields) {
                 if (!this.props.fields.hasOwnProperty(key)) continue;
                 let value = this.props.fields[key];
+                console.log("key:" + key);
+                console.log("value:" + value);
 
                 fields.push(<td>{row[value]}</td>);
 
