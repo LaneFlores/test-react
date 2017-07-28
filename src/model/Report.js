@@ -17,7 +17,8 @@ export default class Report extends React.Component {
         this.props.fields.forEach(function(field) {
             rows.push(<th>{field}</th>);
         });
-        return (
+        return (<section>HALP</section>);
+        /*return (
             <section>
                 <header>{this.props.title}</header>
                 <table>
@@ -26,7 +27,7 @@ export default class Report extends React.Component {
                     </tr>
                 </table>
             </section>
-        );
+        );*/
     }
 
     renderField(field) {
