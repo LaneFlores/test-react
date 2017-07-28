@@ -46,8 +46,8 @@ export default class Report extends React.Component {
         console.log("Here?");
         for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
-            let row = this.props.records[field];
-            records.push(this.renderRecord(row));
+            //let row = this.props.records[field];
+            records.push(this.renderRecord(this.props.records[field]));
         }
         console.log("Or here?");
 
