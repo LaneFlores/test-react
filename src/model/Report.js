@@ -17,7 +17,8 @@ export default class Report extends React.Component {
         /*this.props.fields.forEach(function(field) {
             rows.push(<th>{field}</th>);
         });*/
-        return (<section>HALP</section>);
+        console.log(this.props.fields);
+        return (<section>{this.props.fields}</section>);
         /*return (
             <section>
                 <header>{this.props.title}</header>
