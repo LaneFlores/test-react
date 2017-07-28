@@ -18,8 +18,11 @@ export default class Report extends React.Component {
             rows.push(<th>{field}</th>);
         });*/
         console.log(this.props.fields);
-        return (<section>{this.props.fields}</section>);
-        /*return (
+        for (var key in this.props.fields) {
+            rows.push(<th>{field}</th>);
+        }
+        //return (<section>{this.props.fields}</section>);
+        return (
             <section>
                 <header>{this.props.title}</header>
                 <table>
@@ -28,7 +31,7 @@ export default class Report extends React.Component {
                     </tr>
                 </table>
             </section>
-        );*/
+        );
     }
 
     renderField(field) {
