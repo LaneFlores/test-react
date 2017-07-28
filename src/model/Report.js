@@ -12,17 +12,13 @@ export default class Report extends React.Component {
         };
     }*/
 
-    constructor() {
-        super();
-    }
-
     render() {
         return (
             <section>
                 <header>{this.props.title}</header>
                 <table>
                     <tr>
-                        {this.props.fields.forEach((field) => {this.renderField(field)})}
+
                     </tr>
                 </table>
             </section>
