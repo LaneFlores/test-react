@@ -23,12 +23,12 @@ export default class Report extends React.Component {
 
         for (let field in this.props.records) {
             if (!this.props.records.hasOwnProperty(field)) continue;
-            row = this.props.records[field];
+            let row = this.props.records[field];
 
-            fields = [];
+            let fields = [];
             for (let key in this.props.fields) {
                 if (!this.props.fields.hasOwnProperty(key)) continue;
-                value = this.props.fields[key];
+                let value = this.props.fields[key];
 
                 fields.push(<td>{row[value]}</td>);
 
