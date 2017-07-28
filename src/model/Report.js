@@ -14,9 +14,9 @@ export default class Report extends React.Component {
 
     render() {
         let rows = [];
-        this.props.fields.forEach(function(field) {
+        /*this.props.fields.forEach(function(field) {
             rows.push(<th>{field}</th>);
-        });
+        });*/
         return (<section>HALP</section>);
         /*return (
             <section>
