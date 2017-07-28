@@ -18,7 +18,7 @@ export default class Report extends React.Component {
                 <header>{this.props.title}</header>
                 <table>
                     <tr>
-
+                        {this.props.fields.map((field) => {this.renderField(field)})}
                     </tr>
                 </table>
             </section>
