@@ -93,6 +93,7 @@ const ReportPage = () => (
     <Report
         title="Test Report"
         fields={{first:"first", second:"second"}}
+        arr_fields={["one", "two", "three"]}
         records={{
             one:{first:"asdf", second:"qwer"}
         }}
