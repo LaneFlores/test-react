@@ -34,7 +34,6 @@ export default class Report extends React.Component {
                 console.log(row);
 
                 fields.push(<td>{row[value]}</td>);
-
             }
             rows.push(
                 <tr>
