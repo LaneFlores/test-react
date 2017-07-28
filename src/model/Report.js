@@ -23,8 +23,9 @@ export default class Report extends React.Component {
             if (!this.props.fields.hasOwnProperty(key)) continue;
             rows.push(<th>{this.props.fields[key]}</th>);
         }
-        for (let field in this.props.arr_fields) {
-            rows.push(<th>field</th>);
+        for (let key in this.props.arr_fields) {
+            if (!this.props.arr_fields.hasOwnProperty(key)) continue;
+            rows.push(<th>{this.props.fields[key]}</th>);
         }
         //return (<section>{this.props.fields}</section>);
         return (
