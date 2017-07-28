@@ -13,34 +13,54 @@ export default class Report extends React.Component {
     }*/
 
     render() {
+        let headers = [];
         let rows = [];
-        /*this.props.fields.forEach(function(field) {
-            rows.push(<th>{field}</th>);
-        });*/
-        console.log(this.props.fields);
-        console.log(this.props.arr_fields);
+
         for (let key in this.props.fields) {
             if (!this.props.fields.hasOwnProperty(key)) continue;
-            rows.push(<th>{this.props.fields[key]}</th>);
+            headers.push(<th>{this.props.fields[key]}</th>);
         }
-        for (let key in this.props.arr_fields) {
-            if (!this.props.arr_fields.hasOwnProperty(key)) continue;
-            console.log("key: " + key);
-            console.log("value: " + this.props.arr_fields[key]);
-            rows.push(<th>{this.props.arr_fields[key]}</th>);
+
+        for (let field in this.props.records) {
+            if (!this.props.records.hasOwnProperty(field)) continue;
+            row = this.props.records[field];
+
+            fields = [];
+            for (let key in this.props.fields) {
+                if (!this.props.fields.hasOwnProperty(key)) continue;
+                value = this.props.fields[key];
+
+                fields.push(<td>{row[value]}</td>);
+
+            }
+            rows.push(
+                <tr>
+                    {fields}
+                </tr>
+            );
         }
-        //return (<section>{this.props.fields}</section>);
+
+
+
         return (
             <section>
                 <header>{this.props.title}</header>
                 <table>
                     <tr>
-                        {rows}
+                        {headers}
                     </tr>
+                    {rows}
                 </table>
             </section>
         );
     }
+
+    /*
+     for (let key in this.props.fields) {
+     if (!this.props.fields.hasOwnProperty(key)) continue;
+     rows.push(<th>{this.props.fields[key]}</th>);
+     }
+     */
 
     renderField(field) {
         return (<th>{field}</th>);
