@@ -130,8 +130,7 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            /*<Route exact path="/report" component={ReportPage}/>*
-            <Route exact path="/report" component={reportView}/>*/
+            <Route exact path="/report" component={reportView.render()}/>
         </div>
     </Router>
 );
