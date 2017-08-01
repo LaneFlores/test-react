@@ -113,7 +113,7 @@ const Topics = ({ match }) => (
     />
 );*/
 
-const ReportTest = reportView.render();
+const ReportTest = (new Game).render();
 
 
 const BasicExample = () => (
