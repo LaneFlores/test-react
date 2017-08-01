@@ -42,7 +42,7 @@ export default class ReportView extends React.Component {
         return (
             <section>
 
-                <div>{this.report.title}</div>
+                <div>{this.state.report.title}</div>
             </section>
         );
     }
