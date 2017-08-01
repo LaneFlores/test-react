@@ -12,10 +12,10 @@ export default class ReportView extends React.Component {
         };
     }*/
 
-    constructor(report) {
+    constructor() {
         super();
         this.state = {
-            report: report
+            report: this.props.report
         };
     }
 

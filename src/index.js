@@ -113,7 +113,9 @@ const Topics = ({ match }) => (
     />
 );*/
 
-const ReportTest = new Game();
+const ReportTest = () => (
+    <ReportView report={report} />
+);
 
 
 const BasicExample = () => (
