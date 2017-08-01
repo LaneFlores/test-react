@@ -22,7 +22,6 @@ let report = new Report(
         a:{left:"lllll",right:"rrrrr"}
     }
 );
-let reportView = new ReportView(report);
 
 function counter(state = 0, action) {
     switch (action.type) {
@@ -134,7 +133,6 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route exact path="/report" component={ReportView} />
             <Route exact path="/test" component={ReportTest} />
         </div>
     </Router>
