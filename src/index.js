@@ -124,6 +124,7 @@ const BasicExample = () => (
                 <li><Link to="/about">About</Link></li>
                 <li><Link to="/topics">Topics</Link></li>
                 <li><Link to="/report">Report</Link></li>
+                <li><Link to="/test">Test</Link></li>
             </ul>
 
             <hr/>
@@ -132,6 +133,7 @@ const BasicExample = () => (
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
             <Route exact path="/report" component={ReportView} />
+            <Route exact path="/test" component={ReportTest} />
         </div>
     </Router>
 );
