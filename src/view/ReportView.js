@@ -41,18 +41,22 @@ export default class ReportView extends React.Component {
 
         return (
             <section>
-                /*<header>{this.props.title}</header>
-                <table>
-                    <tr>
-                        {headers}
-                    </tr>
-                    {rows}
-                    {records}
-                </table>*/
+
                 <div>{this.report.title}</div>
             </section>
         );
     }
+
+    /*
+     <header>{this.props.title}</header>
+     <table>
+     <tr>
+     {headers}
+     </tr>
+     {rows}
+     {records}
+     </table>
+     */
 
     renderRecord(record) {
         let columns = [];
