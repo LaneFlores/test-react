@@ -100,7 +100,7 @@ const Topics = ({ match }) => (
     </div>
 );
 
-const ReportPage = () => (
+/*const ReportPage = () => (
     <ReportView
         title="Test Report"
         fields={["one", "two", "three"]}
@@ -111,7 +111,7 @@ const ReportPage = () => (
         }}
         //fields={{first:"first", second:"second"}}
     />
-);
+);*/
 
 
 
