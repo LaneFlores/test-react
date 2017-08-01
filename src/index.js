@@ -113,7 +113,7 @@ const Topics = ({ match }) => (
     />
 );*/
 
-const ReportTest = (new Game).render();
+const ReportTest = (new Game()).render();
 
 
 const BasicExample = () => (
@@ -131,7 +131,7 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route path="/render" render={(report) => <ReportView/>} />
+            <Route path="/render" render={ReportTest} />
         </div>
     </Router>
 );
