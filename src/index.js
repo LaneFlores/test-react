@@ -131,7 +131,7 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route path="/render" render={ReportTest} />
+            <Route path="/render" render={(report) => <ReportView/>} />
         </div>
     </Router>
 );
