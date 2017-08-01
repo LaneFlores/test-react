@@ -113,6 +113,7 @@ const Topics = ({ match }) => (
     />
 );*/
 
+const ReportTest = reportView.render();
 
 
 const BasicExample = () => (
@@ -130,7 +131,7 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route path="/render" render={reportView} />
+            <Route path="/render" render={ReportTest} />
         </div>
     </Router>
 );
