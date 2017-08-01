@@ -21,7 +21,7 @@ export default class ReportView extends React.Component {
         let headers = [];
         let rows = [];
 
-        for (let key in this.props.fields) {
+        /*for (let key in this.props.fields) {
             if (!this.props.fields.hasOwnProperty(key)) continue;
             headers.push(<th>{this.props.fields[key]}</th>);
         }
@@ -33,35 +33,24 @@ export default class ReportView extends React.Component {
             //let row = this.props.records[field];
             records.push(this.renderRecord(this.props.records[field]));
         }
-        console.log("Or here?");
+        console.log("Or here?");*/
 
 
 
         return (
             <section>
-                <header>{this.props.title}</header>
+                /*<header>{this.props.title}</header>
                 <table>
                     <tr>
                         {headers}
                     </tr>
                     {rows}
                     {records}
-                </table>
+                </table>*/
                 <div>{this.report.title}</div>
             </section>
         );
     }
-
-    /*
-     for (let key in this.props.fields) {
-     if (!this.props.fields.hasOwnProperty(key)) continue;
-     rows.push(<th>{this.props.fields[key]}</th>);
-     }
-     */
-
-    /*renderField(field) {
-        return (<th>{field}</th>);
-    }*/
 
     renderRecord(record) {
         let columns = [];
