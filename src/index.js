@@ -5,6 +5,7 @@ import App from './App';
 import './css/index.css';
 import Game from './model/Game';
 import Report from './model/Report';
+import ReportView from './view/ReportView';
 //import PersonList from "./model/PersonList";
 import {
     BrowserRouter as Router,
@@ -12,6 +13,16 @@ import {
     Link
 } from 'react-router-dom';
 import { createStore } from 'redux'
+
+// Variable Initialization
+let report = new Report(
+    "Test Report",
+    ["left", "right"],
+    {
+        a:{left:"lllll",right:"rrrrr"}
+    }
+);
+let reportView = new ReportView(report);
 
 function counter(state = 0, action) {
     switch (action.type) {
@@ -90,7 +101,7 @@ const Topics = ({ match }) => (
 );
 
 const ReportPage = () => (
-    <Report
+    <ReportView
         title="Test Report"
         fields={["one", "two", "three"]}
         records={{
@@ -119,7 +130,8 @@ const BasicExample = () => (
             <Route exact path="/" component={Home}/>
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route exact path="/report" component={ReportPage}/>
+            /*<Route exact path="/report" component={ReportPage}/>*/
+            <Route exact path="/report" component={reportView.render()}/>
         </div>
     </Router>
 );
