@@ -4,3 +4,12 @@ body {
     font-family: sans-serif;
 }
 
+[data-type="report"] * {
+    padding: 4px;
+}
+
+[data-type="report"] header {
+    background: #dddddd;
+    border-radius: 8px;
+    padding: 8px;
+}

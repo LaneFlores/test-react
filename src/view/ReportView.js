@@ -39,7 +39,7 @@ export default class ReportView extends React.Component {
         console.log("Or here?");
 
         return (
-            <section>
+            <section data-type="report">
                 <header>{this.state.report.title}</header>
                 <table>
                     <tr>
