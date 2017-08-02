@@ -4,6 +4,10 @@ body {
     font-family: sans-serif;
 }
 
+[data-type="report"] {
+    margin: 4px;
+}
+
 [data-type="report"] * {
     padding: 4px;
 }
