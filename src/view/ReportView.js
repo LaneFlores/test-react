@@ -66,9 +66,9 @@ export default class ReportView extends React.Component {
 
     renderRecord(record) {
         let columns = [];
-        for (let key in this.props.fields) {
-            if (!this.props.fields.hasOwnProperty(key)) continue;
-            let value = this.props.fields[key];
+        for (let key in this.state.report.fields) {
+            if (!this.state.report.fields.hasOwnProperty(key)) continue;
+            let value = this.state.report.fields[key];
             console.log("key:" + key);
             console.log("value:" + value);
 
