@@ -24,7 +24,7 @@ export default class ReportView extends React.Component {
         let headers = [];
         let rows = [];
 
-        for (let key in this.props.fields) {
+        for (let key in this.state.report.fields) {
             if (!this.state.report.fields.hasOwnProperty(key)) continue;
             headers.push(<th>{this.state.report.fields[key]}</th>);
         }
