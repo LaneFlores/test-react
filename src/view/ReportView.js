@@ -14,6 +14,7 @@ export default class ReportView extends React.Component {
 
     constructor() {
         super();
+        console.log(this.props);
         this.state = {
             report: this.props.report
         };
