@@ -113,7 +113,7 @@ const Topics = ({ match }) => (
 );*/
 
 const ReportTest = () => (
-    <ReportView report={report} />
+    <ReportView report={report} something="asdf" />
 );
 
 
