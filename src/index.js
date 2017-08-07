@@ -122,13 +122,10 @@ const BasicExample = () => (
 
             <hr/>
 
-            <Switch>
-                <Route path="/" component={Home} />
-                <Route exact path="/about" component={About}/>
-                <Route exact path="/topics" component={Topics}/>
-                <Route path="/report" component={ReportTest} />
-            </Switch>
-
+            <Route path="/" component={Home} />
+            <Route exact path="/about" component={About}/>
+            <Route exact path="/topics" component={Topics}/>
+            <Route path="/report" component={ReportTest} />
 
         </div>
     </Router>
