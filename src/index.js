@@ -17,9 +17,10 @@ import { createStore } from 'redux'
 // Variable Initialization
 let report = new Report(
     "Test Report",
-    ["left", "right"],
+    ["name", "type", "damage", "summary"],
     {
-        a:{left:"lllll",right:"rrrrr"}
+        a:{name:"Mind Lash",type:"Arcane",damage:"5 body",summary:"Something about mind attacks. ._."},
+        b:{name:"Charm",type:"Arcane",damage:"-",summary:"Charm a player? idk"},
     }
 );
 
