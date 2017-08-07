@@ -10,7 +10,8 @@ import ReportView from './view/ReportView';
 import {
     BrowserRouter as Router,
     Route,
-    Link
+    Link,
+    Switch
 } from 'react-router-dom';
 import { createStore } from 'redux'
 
@@ -92,21 +93,14 @@ const Topics = ({ match }) => (
     </div>
 );
 
-/*const ReportPage = () => (
-    <ReportView
-        title="Test Report"
-        fields={["one", "two", "three"]}
-        records={{
-            a:{one:"a", two:"aa", three:"aaa"},
-            b:{one:"b", two:"bb"},
-            c:{one:"c", two:"cc", three:"ccc"}
-        }}
-        //fields={{first:"first", second:"second"}}
-    />
-);*/
-
-const ReportTest = () => (
+const reportView = () => (
     <ReportView report={report} />
+);
+
+const NotFoundView = () => (
+    <div>
+        <h1>404 Not Found :o</h1>
+    </div>
 );
 
 
@@ -125,13 +119,37 @@ const BasicExample = () => (
             <Route path="/" component={Home} />
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
-            <Route path="/report" component={ReportTest} />
+            <Route path="/report" component={reportView} />
+
+        </div>
+    </Router>
+);
+
+
+const SwitchExample = () => (
+    <Router>
+        <div>
+            <ul>
+                <li><Link to="/">Home</Link></li>
+                <li><Link to="/about">About</Link></li>
+                <li><Link to="/topics">Topics</Link></li>
+                <li><Link to="/report">Report</Link></li>
+            </ul>
+
+            <hr/>
+            <Switch>
+                <Route exact path="/" component={Home} />
+                <Route exact path="/about" component={About}/>
+                <Route exact path="/topics" component={Topics}/>
+                <Route path="/report" component={reportView} />
+                <Route component={NotFoundView} />
+            </Switch>
 
         </div>
     </Router>
 );
 
 ReactDOM.render(
-    <BasicExample />,
+    <SwitchExample />,
     document.getElementById('root')
 );
