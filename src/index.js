@@ -122,7 +122,7 @@ const BasicExample = () => (
 
             <hr/>
 
-            <Route exact path="/" component={Home}/>
+            <IndexRoute component={Home} />
             <Route exact path="/about" component={About}/>
             <Route exact path="/topics" component={Topics}/>
             <Route path="/report" component={ReportTest} />
