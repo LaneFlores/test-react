@@ -1,20 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import $ from "jquery";
+//import $ from "jquery";
 
 export default class ReportView extends React.Component {
-    /*constructor(title, fields, records) {
-        super();
-        this.state = {
-            title: title,
-            fields: fields,
-            records: records
-        };
-    }*/
-
     constructor(props) {
         super();
+        console.log("props:");
         console.log(props);
+        console.log("props.report:");
+        console.log(props.report);
         this.state = {
             report: props.report
         };
@@ -33,7 +27,6 @@ export default class ReportView extends React.Component {
         console.log("Here?");
         for (let field in this.state.report.records) {
             if (!this.state.report.records.hasOwnProperty(field)) continue;
-            //let row = this.state.report.records[field];
             records.push(this.renderRecord(this.state.report.records[field]));
         }
         console.log("Or here?");
@@ -48,21 +41,9 @@ export default class ReportView extends React.Component {
                     {rows}
                     {records}
                 </table>
-                <div></div>
             </section>
         );
     }
-
-    /*
-     <header>{this.props.title}</header>
-     <table>
-     <tr>
-     {headers}
-     </tr>
-     {rows}
-     {records}
-     </table>
-     */
 
     renderRecord(record) {
         let columns = [];

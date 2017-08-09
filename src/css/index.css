@@ -1,8 +1,62 @@
+/*
+16px - min font size
+24px - max font size
+400px - min screen size
+800 - max screen size
+*/
+html { font-size: 16px; }
+@media screen and (min-width: 400px) { html { font-size: calc(16px + ((18 - 16) * (100vw - 400px) / (1200 - 400))); } }
+@media screen and (min-width: 1200px) { html { font-size: 18px; } }
+
 body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
+    font-size: 1rem;
 }
+
+/* NAV */
+
+#content-root nav {
+    background: #131d60;
+    display: flex;
+    flex-direction: row;
+    padding: 8px;
+}
+
+#content-root nav > * {
+    padding: 8px;
+}
+
+#content-root nav ul li, #content-root nav div {
+    display: inline-block;
+}
+
+#content-root nav div {
+    flex-grow: 10;
+}
+
+#content-root nav ul {
+    flex-grow: 1;
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+#content-root nav ul li {
+    display: inline-block;
+    margin: 0 16px;
+    flex-grow: 1;
+}
+
+#content-root nav, #content-root nav a {
+    color: #eeeeee;
+    line-height: 18px;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* MAIN */
 
 [data-type="report"] {
     margin: 4px;
