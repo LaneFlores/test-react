@@ -1,3 +1,7 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Inconsolata');
+
+/* GLOBALS */
 /*
 16px - min font size
 24px - max font size
@@ -11,7 +15,7 @@ html { font-size: 16px; }
 body {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
+    font-family: Inconsolata, sans-serif;
     font-size: 1rem;
 }
 
@@ -52,14 +56,16 @@ body {
 #content-root nav, #content-root nav a {
     color: #eeeeee;
     line-height: 18px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-/* MAIN */
+/* REPORT */
 
 [data-type="report"] {
     margin: 4px;
+    border: 2px solid #dddddd;
+    border-radius: 9px;
 }
 
 [data-type="report"] * {
@@ -68,6 +74,18 @@ body {
 
 [data-type="report"] header {
     background: #dddddd;
-    border-radius: 8px;
+    border-radius: 8px 8px 0 0;
     padding: 8px;
+}
+
+[data-type="report"] > table {
+    width: 100%;
+}
+
+[data-type="report"] > table > tr:first-of-type {
+    background: #eeeeee;
+}
+
+[data-type="report"] > table > tr:nth-child(2n) {
+    background: #f8f8f8;
 }

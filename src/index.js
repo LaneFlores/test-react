@@ -47,6 +47,15 @@ let starReport = new Report(
             RingTime:"00:00:15",
             TalkTime:"00:30:50",
             Disposition:"SOME OTHER DISPOSITION"
+        },
+        c:{
+            CallDate:"2000-01-01 12:00:00 AM UST",
+            Location:"Venice",
+            CallFrom:"Another Person!",
+            CallTo:"OH BOY SOMEONE",
+            RingTime:"01:00:15",
+            TalkTime:"01:30:50",
+            Disposition:"SO MANY DISPOSITIONS"
         }
     }
 );
